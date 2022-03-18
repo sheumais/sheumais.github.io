@@ -2,28 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta content="Sheumais" property="og:title" />
-    <meta content="test" property="og:description" />
+    <meta content="TheMrPancake" property="og:title" />
+    <meta content="was here..." property="og:description" />
     <meta content="https://cdn.discordapp.com/attachments/876118912771686403/954355755258089492/853affdf5629a1491efaa5d87df1aec2.png" property="og:image" />
 </head>
 
 <body>
-    
-<?php
-
-function getRealUserIp(){
-    switch(true){
-      case (!empty($_SERVER['HTTP_X_REAL_IP'])) : return $_SERVER['HTTP_X_REAL_IP'];
-      case (!empty($_SERVER['HTTP_CLIENT_IP'])) : return $_SERVER['HTTP_CLIENT_IP'];
-      case (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) : return $_SERVER['HTTP_X_FORWARDED_FOR'];
-      default : return $_SERVER['REMOTE_ADDR'];
-    }
-}
-
-getRealUserIp();
-
-?>
-
 </body>
 
 </html>
