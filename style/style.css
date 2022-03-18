@@ -17,7 +17,7 @@ body {
 }
 .bg-image {
   /* The image used */
-  background-image: url("style/tw4.png");
+  background-image: url("../style/tw4.png");
   
   /* Add the blur effect */
   filter: blur(8px);
