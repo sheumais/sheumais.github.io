@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="Sheumais" property="og:title" />
+    <link href="style/style.css" rel="stylesheet">
+    <link rel="icon" href="style/tmp.png">
+    <title>Sheumais</title>
+</head>
+
+<body>
+    <main>
+        <p id="s">Waiting...</p>
+    </main>
+</body>
+<script>
+    const q = location.hash
+    if (q && q !== "#") {
+        location.href = atob(q.slice(1))
+    } else {
+        const s = document.getElementById("s")
+        s.innerText = "Error 400"
+    }
+</script>
