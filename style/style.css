@@ -29,3 +29,6 @@ body {
   padding: 20px;
   text-align: center;
 }
+.bg {
+  background-image: url("../style/background_tw1");
+}
