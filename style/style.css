@@ -29,6 +29,8 @@ body {
   width: 60%;
   padding: 20px;
   text-align: center;
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
 }
 .bg {
   background-image: url("../style/background_tw1.png");
