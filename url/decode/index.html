@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="style/style.css" rel="stylesheet">
+    <link rel="icon" href="style/tmp.png">
+    <title>Sheumais</title>
+</head>
+<body>
+    <main>
+        <p id="e"></p>
+    </main>
+</body>
+<script>
+    const q = location.hash
+    const s = document.getElementById("e")
+    if (q && q !== "#") {
+        s.innerText = atob(q.slice(1))
+    } else {
+        s.innerText = "Error 400"
+    }
+</script>
+</html>
