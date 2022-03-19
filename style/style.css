@@ -2,6 +2,7 @@ html {
     height: 100%;
 }
 body {
+    background-image: url("../style/background_tw1.png");
     background: rgb(64, 64, 64);
     background-size: 100% 100%;
     height: 100%;
