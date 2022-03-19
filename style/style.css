@@ -31,4 +31,6 @@ body {
 }
 .bg {
   background-image: url("../style/background_tw1.png");
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
 }
