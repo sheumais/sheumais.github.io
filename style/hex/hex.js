@@ -383,7 +383,7 @@ function canvasApp() {
     ivyn.stroke();
   }
   function sidora() {
-    ivyn.fillStyle = `rgb(64,64,64)`;
+    ivyn.fillStyle = rgb(64,64,64);
     ivyn.fillRect(0, 0, lurine.width, lurine.height);
     izabella();
   }
