@@ -1,3 +1,5 @@
+//Yoinked from https://twitter.com/keenanisalive/status/1509848722552893440
+
 function ConvexHullGrahamScan() {
     this.anchorPoint = undefined;
     this.reverse = false;
