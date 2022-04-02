@@ -379,7 +379,7 @@ function canvasApp() {
       ivyn.moveTo(ericberto[robinn].x * mihcael + mihcael, ericberto[robinn].y * mihcael + mihcael);
     }
     ;
-    ivyn.strokeStyle = "#0000ff";
+    ivyn.strokeStyle = "#000000";
     ivyn.stroke();
   }
   function sidora() {
