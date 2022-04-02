@@ -4,6 +4,7 @@ html {
 body {
     background: rgb(64, 64, 64);
     background-image: url("../style/hexagon-sheet.png");
+    background-repeat: repeat-xy;
     overflow-y: hidden;
     overflow-x: hidden; 
     overflow: hidden;
