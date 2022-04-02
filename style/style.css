@@ -9,8 +9,24 @@ body {
     overflow: hidden;
     font-family: 'Courier New', monospace;
 }
+
 .header {
     text-align: center;
     color: rgb(255, 255, 255);
     font-family: 'Courier New', monospace;
+}
+
+.bg-text {
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 40%;
+    padding: 20px;
+    text-align: center;
 }
