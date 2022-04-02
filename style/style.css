@@ -34,9 +34,9 @@ body {
     background-image: url("../style/hexagon-sheet.png");
     background-repeat: repeat-xy;
     animation-name: movebg;
-    animation-duration: 36000s;
+    animation-duration: 30s;
 }
 @keyframes movebg {
   0%   {right:0px; bottom:0px;}
-  100% {left:36000px; top:24000px;}
+  100% {left:1000px; top:1000px;}
 }
