@@ -27,14 +27,3 @@ body {
   padding: 20px;
   text-align: center;
 }
-.animate-bg {
-    background: rgb(64, 64, 64);
-    background-image: url("../style/hexagon-sheet.png");
-    background-repeat: repeat-xy;
-    animation-name: movebg;
-    animation-duration: 30s;
-}
-@keyframes movebg {
-  0%   {left:0px; top:0px;}
-  100% {left:1000px; top:1000px;}
-}
