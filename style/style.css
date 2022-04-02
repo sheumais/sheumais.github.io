@@ -37,6 +37,6 @@ body {
     animation-duration: 30s;
 }
 @keyframes movebg {
-  0%   {right:0px; bottom:0px;}
+  0%   {left:0px; top:0px;}
   100% {left:1000px; top:1000px;}
 }
