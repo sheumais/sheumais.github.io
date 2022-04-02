@@ -121,7 +121,7 @@ ConvexHullGrahamScan.prototype = {
             var p0,
                 p1,
                 p2;
-
+            /*File combined by sheumais.github.io*/
             hullPoints.push(points.shift());
 
             p0 = hullPoints[hullPoints.length - 3];
