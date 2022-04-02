@@ -17,7 +17,7 @@ body {
 }
 
 .bg-text {
-    background-color: rgba(0,0,0, 0.7);
+    background-color: rgba(0,0,0, 1.0);
     color: white;
     font-weight: bold;
     border: 3px solid #f1f1f1;
