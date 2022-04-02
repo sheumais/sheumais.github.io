@@ -1,3 +1,14 @@
+window.addEventListener("load", windowLoadHandler, false);
+
+function windowLoadHandler() {
+	canvasApp();
+}
+	
+function canvasSupport() {
+        var elem = document.createElement('canvas');
+        return !!(elem.getContext && elem.getContext('2d'));
+}
+
 function ConvexHullGrahamScan() {
     this.anchorPoint = undefined;
     this.reverse = false;
