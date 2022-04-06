@@ -9,19 +9,50 @@
   .O {
   
     background-color: #ffc800;
-    border: 3px solid #444;
     display: inline-block;
     width: 70px;
     height: 70px;
     vertical-align: top;
+    cursor: cell;
   }
   
   .F {
   
-    background-color: #808080;
-    border: 3px solid #444;
+    background-color: #333;
     display: inline-block;
     width: 70px;
     height: 70px;
     vertical-align: top;
+    cursor: cell;
+  }
+
+  .lower {
+    width: 100%;
+    background-color: #111;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 4px;
+  }
+
+  .input {
+    border-radius:10px;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+  }
+
+  .submit {
+    background-color: #111;
+    font-size: 16px;
+    padding: 10px 0px;
+    width: 100%;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+
+  body {
+    background-color: #000;
   }
