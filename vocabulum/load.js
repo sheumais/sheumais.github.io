@@ -57,10 +57,7 @@ function celery(array) {
 function checkWord(word, array) {
     if(array.indexOf(word) != -1) {
         const wordSplit = array[array.indexOf(word)].split('');
-        const upper = wordSplit.map(element => {
-            return element.toLowerCase();
-          });
-        const containsAll = upper.every(element => {
+        const containsAll = wordSplit.every(element => {
             return letterList.includes(element);
           });
         if (guessedWords.includes(word)) {
@@ -99,7 +96,7 @@ function checkWord(word, array) {
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     let inputelement = form.elements.input;
-    const word = inputelement.value;
+    const word = inputelement.value.toLowerCase();
     document.getElementById('input').value = '';
     fetchData('https://raw.githubusercontent.com/Sheumais/Sheumais.github.io/main/vocabulum/words.txt')
     .then(arr => checkWord(word, arr));
