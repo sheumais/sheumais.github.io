@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html style="-webkit-text-size-adjust: 100%;">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <style>
+            /* Taken from Chrome */
+            body {
+                --gray-500: rgb(154, 160, 166);
+                --gray-900: rgb(32, 33, 36);
+                background: var(--background-color);
+                color: var(--text-color);
+                word-wrap: break-word;
+                --background-color: var(--gray-900);
+                --error-code-color: var(--gray-500);
+                --heading-color: var(--gray-500);
+                --text-color: var(--gray-500);
+            }
+
+            html {
+                -webkit-text-size-adjust: 100%;
+                font-size: 125%;
+            }
+
+            .icon {
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+               
+            .error-code {
+                color: var(--error-code-color);
+                font-size: .8em;
+                margin-top: 12px;
+                text-transform: uppercase;
+            }
+
+            h1 {
+                color: var(--heading-color);
+                font-size: 1.6em;
+                font-weight: normal;
+                line-height: 1.25em;
+                margin-bottom: 16px;
+            }
+
+
+            .icon {
+                height: 72px;
+                margin: 0 0 40px;
+                width: 72px;
+            }
+
+
+            .interstitial-wrapper {
+                box-sizing: border-box;
+                font-size: 1em;
+                line-height: 1.6em;
+                margin: 14vh auto 0;
+                max-width: 600px;
+                width: 100%;
+            }
+ 
+            h1 {
+                margin-top: 0;
+                word-wrap: break-word;
+            }
+
+            h1 span {
+                font-weight: 500;
+            }
+
+
+            .icon {
+                -webkit-user-select: none;
+                user-select: none;
+                display: inline-block;
+                filter: invert(1);
+            }
+
+            .icon-generic {
+            content: -webkit-image-set(
+                    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIAQMAAABvIyEEAAAABlBMVEUAAABTU1OoaSf/AAAAAXRSTlMAQObYZgAAAENJREFUeF7tzbEJACEQRNGBLeAasBCza2lLEGx0CxFGG9hBMDDxRy/72O9FMnIFapGylsu1fgoBdkXfUHLrQgdfrlJN1BdYBjQQm3UAAAAASUVORK5CYII=) 1x,
+                    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQAQMAAADdiHD7AAAABlBMVEUAAABTU1OoaSf/AAAAAXRSTlMAQObYZgAAAFJJREFUeF7t0cENgDAMQ9FwYgxG6WjpaIzCCAxQxVggFuDiCvlLOeRdHR9yzjncHVoq3npu+wQUrUuJHylSTmBaespJyJQoObUeyxDQb3bEm5Au81c0pSCD8HYAAAAASUVORK5CYII=) 2x);
+            }
+
+
+        </style>
+    </head>
+    <body class="neterror" style="font-family:'Segoe UI', Tahoma, sans-serif; font-size: 75%;">
+        <div class="interstitial-wrapper">
+            <div>
+                <div class="icon icon-generic"></div>
+                <div>
+                    <h1>
+                        <span>This site can't be reached</span>
+                    </h1>
+                    <p style="display: inline;">It may require a higher skill level for access.</p>
+                    <div class="error-code">ERR_SKILL_ISSUE</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
