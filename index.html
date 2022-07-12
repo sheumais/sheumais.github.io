@@ -5,27 +5,83 @@
     <link href="../style/style.css" rel="stylesheet">
     <link rel="icon" href="../style/hexagon.svg">
     <style>
-    @keyframes animatedBackground{0%{background-position:0 0}100%{background-position:0 1000px}}body{background-image:url(../style/hexagon-sheet.png);background-color:#000;animation:animatedBackground 20s linear infinite}
-    
-        .icon {
-    max-width: 10%;
-    max-height: 10%;
-    }
     </style>
     <title>Sheumais</title>
     <script type="text/javascript" src="style/f12.js"></script>
 </head>
-<body>
+<body style="overflow:hidden; margin:0;">
     <main>
+        <canvas id="glCanvas" width="1000" height="1000"></canvas>
         <div class="bg-text">
             <h2>Utility IO Website</h2>
             <h1 style="font-size:50px">I am Sheumais</h1>
-            <div>
-                <a href="https://sheumais.github.io/colour/"><img class="icon" src="../style/art.png" alt="Colour Picker"></a>
-                <a href="https://sheumais.github.io/lightsout/"><img class="icon" src="../style/lo.png" alt="Lights Out"></a>
-                <a href="https://sheumais.github.io/vocabulum/"><img class="icon" src="../style/v.png" alt="Vocabulum"></a>
-            </div>
+
         </div>
     </main>
 </body>
+<script id="vertex-shader-2d" type="notjs">
+ 
+    attribute vec4 a_position;
+
+    void main() {
+      gl_Position = a_position;
+    }
+  </script>
+   
+  <script id="fragment-shader-2d" type="notjs">
+    precision mediump float;
+    uniform vec2 u_resolution;
+    uniform float time;
+
+    vec2 hash( vec2 p )
+{
+	p = vec2( dot(p,vec2(127.1,311.7)), dot(p,vec2(269.5,183.3)) );
+	return -1.0 + 2.0*fract(sin(p)*41758.5453123);
+}
+
+float circle(vec2 uv, float r, float b) {
+      
+    float d = length(uv);
+    
+    return smoothstep(r, r-b, d);
+}
+
+vec3 Layer(vec2 uv) {
+
+    vec3 col = vec3(0.0);
+
+    vec2 gv = fract(uv)-.5;
+    vec2 id = floor(uv);
+    
+    for (int y=-1;y<=1;y++) {
+        for (int x=-1;x<=1;x++) {
+            vec2 offs = vec2(x, y);
+            float n = hash(vec2(id+offs)).y; //pseudo rand between 0 and 1
+            float size = fract(n*420.0);
+            float circle = circle( (gv-offs-vec2(n, fract(n*69.))+.5) , 0.25*n, 0.1);
+            vec3 colour = vec3(0.8,0.9,1)*3.0;
+            
+            col += circle*size*colour;
+        }
+    }
+    return col;
+}
+      
+    void main() {
+      vec2 uv = (gl_FragCoord.xy-u_resolution.xy*.5)/u_resolution.y; 
+      uv *= 0.5;
+      vec3 col = vec3(0.03,0.03,0.08);
+
+      for (float i=0.; i<1.; i+=1./10.) {
+        float depth = fract(i);
+        float scale = mix(20., .5, depth) ;
+        float fade = depth*smoothstep(.9,.3,depth);
+        
+        col += Layer(vec2(uv.x*scale+i*256.,uv.y*scale+i*time))*fade;
+    }
+    gl_FragColor = vec4(col, 1.0);
+    }
+   
+  </script>
+  <script src="../style/webgl.js"></script>
 </html>
