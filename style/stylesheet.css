@@ -1,0 +1,105 @@
+:root {
+    --border: rgb(255, 255, 255);
+    
+    --g1: rgb(98, 0, 234);
+    --g2: rgb(236, 64, 122);
+    --g3: rgb(253, 216, 53);
+  }
+
+body {
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    place-items: center;
+  }
+
+.card {
+    aspect-ratio: 1/1.6;
+    border: 0.5vmin solid var(--border);
+    position: relative;
+    width: 56vmin;
+}
+
+.card:hover:before {
+    background-position: 100% 100%;
+    transform: scale(1.08, 1.03);
+}
+
+.card:before {
+    background: linear-gradient(
+        130deg,
+        transparent 0% 33%,
+        var(--g1) 66%,
+        var(--g2) 83.5%,
+        var(--g3) 100%
+    );
+    background-position: 0% 0%;
+    background-size: 300% 300%;
+    content: "";
+    height: 100%;
+    left:0px;
+    position: absolute;
+    top: 0px;
+    transition: background-position 350ms ease;
+    width: 100%;
+    z-index: 1;
+}
+
+.card:hover > .card-content {
+    background-position: -10% 0%;
+}
+
+.card-content {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.2) 8%, 
+    transparent 8%
+  );
+  background-position: 0% 0%;
+  background-size: 5vmin 5vmin;
+  height: calc(100% - 10vmin);
+  padding: 5vmin;
+  position: relative;
+  transition: background-position 350ms ease;
+  width: calc(100% - 10vmin);
+  z-index: 2;
+}
+
+.card-title,
+.card-subtitle {
+    color: white;
+    font-family: 'ABeeZee', sans-serif;
+    font-weight: 400;
+    margin: 0px;
+    text-decoration: none;
+}
+
+.card-title {
+    font-size: 6vmin;
+}
+
+.card-subtitle {
+    font-size: 3vmin;
+    margin-top: 2vmin;
+}
+
+.icon {
+  max-width: 7vmin;
+  margin-top: 5vmin;
+  transition: transform 100ms ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
