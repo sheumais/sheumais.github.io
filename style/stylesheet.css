@@ -109,8 +109,9 @@ body {
 }
 
 .icon {
-  max-width: 7vmin;
+  max-height: 7vmin;
   margin-top: 5vmin;
+  margin-right: 2vmin;
   transition: transform 250ms ease;
 }
 
