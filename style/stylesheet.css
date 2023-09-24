@@ -91,7 +91,9 @@ body {
 }
 
 .card-title,
-.card-subtitle {
+.card-subtitle,
+.dot,
+.text {
   color: white;
   font-family: 'ABeeZee', sans-serif;
   font-weight: 400;
@@ -101,22 +103,71 @@ body {
 
 .card-title {
   font-size: 6vmin;
+  max-width: min-content;
 }
 
 .card-subtitle {
   font-size: 3vmin;
-  margin-top: 2vmin;
+  margin-top: 1vmin;
+  margin-bottom: 1vmin;
+  max-width: min-content;
 }
 
 .icon {
   max-height: 7vmin;
-  margin-top: 5vmin;
   margin-right: 2vmin;
+  margin-top: 1vmin;
   transition: transform 250ms ease;
 }
 
 .icon:hover {
   transform: scale(1.1);
+}
+
+.dot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.personal {
+  width: 6.25em;
+}
+
+.experience {
+  width: 4em;
+}
+
+.dot::after {
+  content: "\00B7";
+  margin: 0 1vmin;
+  margin-left: auto;
+}
+
+.text {
+  flex: 1;
+  max-width: 100%;
+  margin-bottom: 1vmin;
+  overflow-wrap: break-word;
+  align-items:baseline;
+}
+
+.horizontal-line {
+  border-top: 0.25vmin solid var(--border);
+  margin: 3vmin 0px;
+}
+
+.flex-text-display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.flex-text-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .noselect {
