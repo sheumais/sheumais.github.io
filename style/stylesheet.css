@@ -113,8 +113,13 @@ body {
   max-width: min-content;
 }
 
+.text {
+  font-size: 2vmin;
+  max-width: min-content;
+}
+
 .icon {
-  max-height: 7vmin;
+  height: 7vmin;
   margin-right: 2vmin;
   margin-top: 1vmin;
   transition: transform 250ms ease;
@@ -131,11 +136,13 @@ body {
 }
 
 .personal {
+  font-size: 2vmin;
   width: 6.25em;
 }
 
 .experience {
-  width: 4em;
+  font-size: 2vmin;
+  width: 3.75em;
 }
 
 .dot::after {
@@ -179,3 +186,15 @@ body {
               user-select: none;
 }
 
+.ai-read {
+  font-size: 2vmin;
+  max-width: 50vmin;
+  color: rgb(5, 5, 5);
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'ABeeZee', sans-serif;
+  font-weight: 400;
+  
+}
